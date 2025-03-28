@@ -57,7 +57,7 @@ def index():
         <title>Upload Image</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
-    <body bgcolor="Green" class="container py-5">
+    <body bgcolor="blue" class="container py-5">
         <h1 class="text-center text-primary">Image Upload Portal</h1>
         <h2 class="text-center">Upload an Image</h2>
         <form method="post" enctype="multipart/form-data" action="/upload" class="mb-4 text-center">
@@ -121,7 +121,7 @@ def get_file(filename):
     file_data = blob.download_as_bytes()
     file_data = json.loads(file_data.decode('utf-8'))
     print(file_data)
-    html= f""" <body bgcolor="Green">
+    html= f""" <body bgcolor="blue">
         <img src='/images/{filename}'>
         <h1>Tiltle:{file_data['title']}</h1>
         <p>Description:{file_data['description']}</p>
